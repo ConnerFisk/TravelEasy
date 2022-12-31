@@ -1,3 +1,7 @@
+/**
+ * This class holds the code for the Header.
+ */
+
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import { Paper, Typography, useMediaQuery } from '@material-ui/core';
@@ -9,7 +13,7 @@ import useStyles from './styles';
 const Map = () => {
     // Initialize the styles for use.
     const classes = useStyles();
-    // If the device widht is larger than 600px,
+    // If the device width is larger than 600px,
     // isMobile will be false.
     const isMobile = useMediaQuery('(min-width:600px')
 
