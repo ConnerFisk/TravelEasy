@@ -38,3 +38,6 @@ A travel application which dynamically displays attractions, hotels, and restaur
 >
 >  [View All Code](TravelEasy) 
 ></details>
+
+###### NOTE
+###### If you would like to deploy this on your own, you must aquire and add your own API keys from Google & RapidAPI.
