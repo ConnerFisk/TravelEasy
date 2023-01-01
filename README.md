@@ -1,4 +1,5 @@
 # [TravelEasy](https://traveleasyapp.netlify.app/)
+###### Click the title above to view the application.
 ###### About
 A travel application which dynamically displays attractions, hotels, and restaurants anywhere in the world. Created using React and Google/RapidAPI APIs.
 
