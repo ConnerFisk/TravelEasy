@@ -6,16 +6,16 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
-import Rating from '@material-ui/lab';
+import Rating from '@material-ui/lab/Rating';
 
 import useStyles from './styles';
 
-const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
+const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }) => {
     // Initialize the styles for use.
     const classes = useStyles();
-    // If the device width is larger than 600px,
-    // isMobile will be false.
-    const isMobile = useMediaQuery('(min-width:600px')
+    // If the device minumum width is larger than 600px,
+    // isDesktop will be true.
+    const isDesktop = useMediaQuery('(min-width:600px')
 
     return (
         <div className={ classes.mapContainer }>
@@ -30,7 +30,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
                     setCoordinates({ lat: e.center.lat, lng: e.center.lng });
                     setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
                 }}
-                onChildClick={''}
+                onChildClick={ (child) => setChildClicked(child) }
             >
                 {/* Display the places as cards on the map. */}
                 {places?.map((place, i) => (
@@ -42,7 +42,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
                     >
                         {
                             // If the user is on mobile, just render the icon.
-                            isMobile ? (
+                            !isDesktop ? (
                                 <LocationOnOutlinedIcon color="primary" fontSize="large" />
                             ) : ( // If the user is not on mobile, render out more information for the place.
                                 <Paper elevation={3} className={ classes.paper }>
@@ -54,6 +54,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
                                         src={ place.photo? place.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg' }
                                         alt={ place.name }
                                     />
+                                    <Rating size="small" value={ Number(place.rating) } readOnly />
                                 </Paper>
                             )
                         }
