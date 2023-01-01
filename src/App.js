@@ -1,3 +1,7 @@
+/*
+*   This file holds all of the neccessary code for the base of the React application.
+*/
+
 import React, { useState, useEffect } from 'react';
 import { CssBaseline, Grid } from '@material-ui/core';
 
