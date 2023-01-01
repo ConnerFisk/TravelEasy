@@ -9,13 +9,11 @@ import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
 import useStyles from './styles';
 
-const List = ({ places, childClicked, isLoading }) => {
+const List = ({ places, childClicked, isLoading, type, setType, rating, setRating }) => {
     // Initialize the styles for use.
     const classes = useStyles();
     // Initialize states and set the starting value
     // for them.
-    const [type, setType] = useState('restaurants');
-    const [rating, setRating] = useState('');
 
     const [elRefs, setElRefs] = useState([]);
 
