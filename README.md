@@ -5,7 +5,7 @@ A travel application which dynamically displays attractions, hotels, and restaur
 
 ###### Goals achieved while completing this project...
 - Become more adept with working with APIs
-- Continue practicng with React
+- Continue practicing with React
 - Gain more experience with building and deploying full applications
 
 
