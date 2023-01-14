@@ -37,7 +37,7 @@ A travel application which dynamically displays attractions, hotels, and restaur
 >  - [Map.jsx](src/components/Map/Map.jsx)
 >  - [PlaceDetails.jsx](src/components/PlaceDetails/PlaceDetails.jsx)
 >
->  [View All Code](TravelEasy) 
+>  [View All Code](src/) 
 ></details>
 
 ###### NOTE
